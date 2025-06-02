@@ -1,0 +1,350 @@
+:root {
+  --navbar-bg: #071a29;
+  --header-bg: #0b2a42;
+
+  --light-bg: #eee;
+  --light-text: #222;
+  --light-card: #fff;
+
+  --dark-bg: #121212;
+  --dark-text: #e0e0e0;
+  --dark-card: #1e1e1e;
+}
+
+/* fade in when loading */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--light-bg);
+  color: var(--light-text);
+  opacity: 0;
+  animation: fadeIn 0.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* header */
+header {
+  background: var(--header-bg);
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+
+/* navbar layout */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--navbar-bg);
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  margin-right: auto;
+}
+
+/* nav links */
+.nav-links,
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.nav-links a,
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.4rem 0.5rem;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  font-weight: bold;
+  border-bottom: 2px solid white;
+}
+
+nav a.current {
+  color: #aaa;
+  pointer-events: none;
+}
+
+/* mobile menu */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 1222px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #333;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    border-top: 1px solid #444;
+  }
+}
+
+/* page content area */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--light-card);
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+section {
+  margin-bottom: 2rem;
+  background: var(--light-card);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input, select, textarea, button {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background: var(--header-bg);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #555;
+}
+
+/* quotes */
+blockquote#quoteDisplay {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #444;
+  border-left: 4px solid #333;
+  padding-left: 1rem;
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+/* calendar */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-top: 1rem;
+}
+
+.calendar-grid div {
+  background: #ddd;
+  padding: 0.75rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.calendar-grid div.has-entry {
+  background: #90ee90;
+}
+
+.calendar-grid div.empty {
+  background: transparent;
+  cursor: default;
+}
+
+#dayDetails {
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* workout blocks */
+.exercise-block {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  background: var(--light-card);
+}
+
+.exercise-block label {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.exercise-block input {
+  display: block;
+  margin-top: 0.25rem;
+}
+
+/* saved routines */
+#saved-routines li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.routine-title {
+  font-weight: bold;
+  cursor: pointer;
+  color: #0077cc;
+  text-decoration: underline;
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  transition: 0.2s;
+}
+
+.routine-title:hover {
+  color: #005fa3;
+}
+
+.routine-details {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  background: #eee;
+  border-radius: 4px;
+}
+
+/* action buttons */
+.remove-btn,
+.edit-btn {
+  margin-left: 0.7rem;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.remove-btn {
+  background: #d2644a;
+}
+
+.remove-btn:hover {
+  background: #bb4e36;
+}
+
+.edit-btn {
+  background: #4a90e2;
+}
+
+.edit-btn:hover {
+  background: #367dc1;
+}
+
+#routine-form button[type="submit"] {
+  background: #4caf50;
+  margin-top: 0.3rem;
+  margin-bottom: 2.5rem;
+}
+
+#routine-form button[type="submit"]:hover {
+  background: #449d48;
+}
+
+/* dark mode tweaks */
+body.dark-mode {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body.dark-mode main,
+body.dark-mode section,
+body.dark-mode .exercise-block {
+  background: var(--dark-card);
+  color: var(--dark-text);
+}
+
+body.dark-mode .routine-details {
+  background: #333;
+  color: #ccc;
+}
+
+body.dark-mode .remove-btn {
+  background: #bb4e36;
+}
+
+body.dark-mode .remove-btn:hover {
+  background: #9f3c2a;
+}
+
+body.dark-mode .edit-btn {
+  background: #367dc1;
+}
+
+body.dark-mode .edit-btn:hover {
+  background: #285e99;
+}
+
+body.dark-mode #routine-form button[type="submit"] {
+  background: #388e3c;
+}
+
+body.dark-mode #routine-form button[type="submit"]:hover {
+  background: #2f7a34;
+}
+
+body.dark-mode blockquote#quoteDisplay {
+  background: #1b1b1b;
+  border-left-color: #888;
+  color: #bbb;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Add anything for .show if used in nav menu toggle */
+.nav-links.show {
+  display: block;
+}

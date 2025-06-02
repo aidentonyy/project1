@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fitrackr - Progress</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/progress-tracker.css">
+</head>
+<body>
+  <header>
+    <h1>Progress Tracker</h1>
+    <nav class="navbar">
+      <!-- button to toggle menu on small screens -->
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="workout-builder.html">Workout Builder</a></li>
+        <li><a href="exercise-suggester.html">Exercise Suggester</a></li>
+        <li><a href="guided-timer.html">Guided Timer</a></li>
+        <li><a class="current" href="#">Progress Tracker</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- form to log data -->
+    <section class="inputs">
+      <h2>Daily Log</h2>
+      <form id="logForm">
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" step="0.1" placeholder="70">
+
+        <label for="workout">Workout:</label>
+        <input type="text" id="workout" placeholder="Optional e.g. push day">
+
+        <button type="submit">Log</button>
+      </form>
+    </section>
+
+    <!-- chart showing weight over time -->
+    <section class="chart">
+      <h2>Weight Over Time (kg)</h2>
+      <svg id="weightChart" width="100%" height="200"></svg>
+    </section>
+
+    <!-- calendar section -->
+    <section class="calendar">
+      <h2>Log Calendar</h2>
+
+      <!-- calendar header with prev and next month buttons -->
+      <div class="calendar-header">
+        <button id="prevMonth" aria-label="Previous Month">←</button>
+        <span id="monthYear"></span>
+        <button id="nextMonth" aria-label="Next Month">→</button>
+      </div>
+
+      <!-- grid showing days -->
+      <div id="calendarDays" class="calendar-grid"></div>
+
+      <!-- area to show details about a selected day -->
+      <div id="dayDetails" style="margin-top: 1em; font-style: italic; min-height: 40px;"></div>
+
+      <!-- area for delete options or messages -->
+      <div id="deleteOptions" style="margin-top: 0.5em;"></div>
+    </section>
+  </main>
+
+  <!-- link to javascript files -->
+  <script src="js/progress-tracker.js"></script>
+  <script src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+/* css/settings.css */
+
+#unit-select {
+  margin-bottom: 1rem;
+}
+
+#save-status {
+  color: green;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+label[for="fontSizeSlider"] {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

@@ -1,0 +1,126 @@
+/* workout block style */
+.exercise-block {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+.exercise-block label {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.exercise-block input {
+  width: auto;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+/* saved routines list items */
+#saved-routines li {
+  margin-bottom: 1rem;
+  list-style-type: none;
+}
+
+/* routine title looks clickable and blue */
+.routine-title {
+  font-weight: bold;
+  cursor: pointer;
+  color: #0077cc;
+  text-decoration: underline;
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  transition: color 0.2s ease;
+}
+
+.routine-title:hover {
+  color: #005fa3;
+}
+
+/* details box for routines */
+.routine-details {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+/* button to remove workout */
+.remove-btn {
+  margin-left: 0.7rem;
+  background-color: #d2644a;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.remove-btn:hover {
+  background-color: #bb4e36;
+}
+
+/* button to edit workout */
+.edit-btn {
+  margin-left: 1.2rem;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.edit-btn:hover {
+  background-color: #367dc1;
+}
+
+/* save button style */
+#routine-form button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.3rem;
+  margin-bottom: 2.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#routine-form button[type="submit"]:hover {
+  background-color: #449d48;
+}
+
+/* dark mode styles */
+body.dark-mode .exercise-block {
+  background-color: #222;
+  border-color: #444;
+  color: #eee;
+}
+
+body.dark-mode .routine-details {
+  background-color: #333;
+  color: #ccc;
+}
+
+body.dark-mode .remove-btn {
+  background-color: #bb4e36;
+}
+
+body.dark-mode .remove-btn:hover {
+  background-color: #9f3c2a;
+}
+
+body.dark-mode #routine-form button[type="submit"] {
+  background-color: #388e3c;
+}
+
+body.dark-mode #routine-form button[type="submit"]:hover {
+  background-color: #2f7a34;
+}

@@ -1,0 +1,137 @@
+/* chart styling */
+.chart svg {
+  background: #eee;
+  border-radius: 8px;
+  width: 100%;
+  height: auto;  /* <-- changed from fixed 200px to auto */
+  max-height: 300px; /* optional max height to keep it reasonable */
+  display: block;
+}
+
+.chart {
+  width: 100%;
+  max-width: 835px;
+  padding: 1rem 1rem 1rem 1rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow-x: hidden; /* hides any accidental overflow */
+}
+
+/* calendar header with space between and centered stuff */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+/* buttons in the calendar header */
+.calendar-header button {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+}
+
+/* calendar grid with 7 columns and some gap */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+/* each day box style */
+.calendar-grid div {
+  background: #ddd;
+  padding: 0.75em;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  user-select: none;
+}
+
+/* days that have an entry get a light green background */
+.calendar-grid div.has-entry {
+  background: #90ee90;
+}
+
+/* empty days are transparent and not clickable */
+.calendar-grid div.empty {
+  background: transparent;
+  cursor: default;
+}
+
+/* text area for showing day details */
+#dayDetails {
+  margin-top: 1em;
+  font-style: italic;
+  min-height: 40px;
+}
+
+/* buttons inside day details area */
+#dayDetails button {
+  margin-top: 0.5em;
+  margin-right: 0.5em;
+  padding: 0.4em 0.8em;
+  font-size: 0.9em;
+  background-color: #f44336; /* red */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* button hover effect */
+#dayDetails button:hover {
+  background-color: #d32f2f;
+}
+
+.has-entry:hover {
+  background-color: #3fae49 !important;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .calendar-grid div {
+  background: #333;  /* Darker background for calendar days */
+  color: var(--dark-text);  /* Light text */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .calendar-grid div.empty {
+  background: transparent;
+  color: #666;  /* Slightly darker text for empty days, but visible */
+  cursor: default;
+}
+
+body.dark-mode .calendar-grid div.has-entry {
+  background: #5cb85c;  /* A nice green for days with workouts */
+  color: white;
+}
+
+body.dark-mode .calendar-grid div.has-entry:hover {
+  background-color: #3fae49 !important;
+  cursor: pointer;
+  color: white;
+}
+
+section.calendar, main {
+  padding-left: 1rem; /* add some padding to prevent clipping */
+  box-sizing: border-box;
+  overflow-x: visible; /* ensure no clipping */
+  position: relative; /* avoid weird shifts */
+}
+
+.calendar-grid {
+  margin-left: 0; /* reset any negative margin */
+  padding-left: 0; /* reset if you had padding */
+}
+
+
+.calendar-grid {
+  max-width: 100%;
+  overflow-x: auto; /* allow horizontal scroll if content is wide */
+  box-sizing: border-box;
+}
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitrackr - Exercise Suggester</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/exercise-suggester.css">
+</head>
+<body>
+  <header>
+    <h1>Exercise Suggester</h1>
+    <!-- Navigation menu -->
+    <nav class="navbar">
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="workout-builder.html">Workout Builder</a></li>
+        <li><a href="#" aria-current="page" class="current">Exercise Suggester</a></li> <!-- current page -->
+        <li><a href="guided-timer.html">Guided Timer</a></li>
+        <li><a href="progress-chart.html">Progress Tracker</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Form to select muscle groups and equipment -->
+    <form id="exerciseForm">
+      <fieldset>
+        <legend>Select Muscle Groups</legend>
+        <label><input type="checkbox" name="muscle" value="chest"> Chest</label>
+        <label><input type="checkbox" name="muscle" value="back"> Back</label>
+        <label><input type="checkbox" name="muscle" value="legs"> Legs</label>
+        <label><input type="checkbox" name="muscle" value="arms"> Arms</label>
+        <label><input type="checkbox" name="muscle" value="shoulders"> Shoulders</label>
+        <label><input type="checkbox" name="muscle" value="core"> Core</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Select Equipment</legend>
+        <label><input type="checkbox" name="equipment" value="machine"> Machine</label>
+        <label><input type="checkbox" name="equipment" value="barbell"> Barbell</label>
+        <label><input type="checkbox" name="equipment" value="dumbbell"> Dumbbell</label>
+        <label><input type="checkbox" name="equipment" value="bodyweight"> Bodyweight</label>
+      </fieldset>
+
+      <button type="submit">Suggest Exercises</button>
+    </form>
+
+    <!-- Section to show exercise suggestions -->
+    <section id="exerciseResults">
+      <h2>Suggestions</h2>
+      <ul id="exerciseList">
+        <li>Pick muscle groups and equipment to see suggestions.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="js/exercise-suggester.js"></script>
+  <script src="js/common.js" defer></script>
+</body>
+</html>

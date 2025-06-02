@@ -1,0 +1,63 @@
+{
+    "chest": [
+      { "name": "Machine Chest Press", "type": "machine" },
+      { "name": "Pec Deck Fly", "type": "machine" },
+      { "name": "Barbell Bench Press", "type": "barbell" },
+      { "name": "Incline Barbell Press", "type": "barbell" },
+      { "name": "Dumbbell Flyes", "type": "dumbbell" },
+      { "name": "Dumbbell Press", "type": "dumbbell" },
+      { "name": "Push-Ups", "type": "bodyweight" },
+      { "name": "Incline Push-Ups", "type": "bodyweight" }
+    ],
+    "back": [
+      { "name": "Lat Pulldown", "type": "machine" },
+      { "name": "Seated Row", "type": "machine" },
+      { "name": "Barbell Deadlift", "type": "barbell" },
+      { "name": "Barbell Row", "type": "barbell" },
+      { "name": "Dumbbell Row", "type": "dumbbell" },
+      { "name": "Reverse Flyes", "type": "dumbbell" },
+      { "name": "Superman", "type": "bodyweight" },
+      { "name": "Pull-Ups", "type": "bodyweight" }
+    ],
+    "legs": [
+      { "name": "Leg Press", "type": "machine" },
+      { "name": "Leg Curl", "type": "machine" },
+      { "name": "Barbell Squats", "type": "barbell" },
+      { "name": "Barbell Lunges", "type": "barbell" },
+      { "name": "Dumbbell Lunges", "type": "dumbbell" },
+      { "name": "Dumbbell Step-Ups", "type": "dumbbell" },
+      { "name": "Bodyweight Squats", "type": "bodyweight" },
+      { "name": "Wall Sit", "type": "bodyweight" }
+    ],
+    "arms": [
+      { "name": "Cable Tricep Pushdown", "type": "machine" },
+      { "name": "Preacher Curl Machine", "type": "machine" },
+      { "name": "Barbell Curl", "type": "barbell" },
+      { "name": "Barbell Skullcrusher", "type": "barbell" },
+      { "name": "Dumbbell Bicep Curl", "type": "dumbbell" },
+      { "name": "Dumbbell Tricep Kickback", "type": "dumbbell" },
+      { "name": "Diamond Push-Ups", "type": "bodyweight" },
+      { "name": "Pull-Ups", "type": "bodyweight" }
+    ],
+    "shoulders": [
+      { "name": "Shoulder Press Machine", "type": "machine" },
+      { "name": "Lateral Raise Machine", "type": "machine" },
+      { "name": "Barbell Overhead Press", "type": "barbell" },
+      { "name": "Barbell Upright Row", "type": "barbell" },
+      { "name": "Dumbbell Lateral Raise", "type": "dumbbell" },
+      { "name": "Dumbbell Shoulder Press", "type": "dumbbell" },
+      { "name": "Pike Push-Ups", "type": "bodyweight" },
+      { "name": "Reverse Plank", "type": "bodyweight" }
+    ],
+    "core": [
+      { "name": "Ab Crunch Machine", "type": "machine" },
+      { "name": "Cable Woodchopper", "type": "machine" },
+      { "name": "Barbell Russian Twist", "type": "barbell" },
+      { "name": "Landmine Twist", "type": "barbell" },
+      { "name": "Dumbbell Side Bend", "type": "dumbbell" },
+      { "name": "Weighted Sit-Ups", "type": "dumbbell" },
+      { "name": "Plank", "type": "bodyweight" },
+      { "name": "Leg Raises", "type": "bodyweight" }
+    ]
+  }
+  

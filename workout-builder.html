@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fitrackr - Workout Builder</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/workout-builder.css">
+</head>
+<body>
+  <header>
+    <h1>Workout Builder</h1>
+    <nav class="navbar">
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#" class="current" aria-current="page">Workout Builder</a></li>
+        <li><a href="exercise-suggester.html">Exercise Suggester</a></li>
+        <li><a href="guided-timer.html">Guided Timer</a></li>
+        <li><a href="progress-chart.html">Progress Tracker</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Create Your Custom Workout Routine</h2>
+    <form id="routine-form">
+      <label for="routine-name">Routine Name:</label>
+      <input type="text" id="routine-name" name="routine-name" required>
+
+      <div id="exercises-container" aria-live="polite"></div>
+
+      <button type="button" id="add-exercise">Add Exercise</button>
+      <button type="submit">Save Routine</button>
+    </form>
+
+    <h3>Your Saved Routines</h3>
+    <ul id="saved-routines" aria-live="polite" aria-label="Saved workout routines"></ul>
+  </main>
+
+  <script src="js/workout-builder.js"></script>
+  <script src="js/common.js" defer></script>
+</body>
+</html>
