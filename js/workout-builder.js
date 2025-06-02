@@ -16,7 +16,10 @@ function addExercise(data = {}) {
   div.className = 'exercise-block';
   div.dataset.id = exercisesCount;
 
-  // add inputs with default or passed values  - gen ai refined code
+  /**
+  This code is based upon generative AI advice
+  Accessed: 22/05/2025
+  */
   div.innerHTML = `
     <label>exercise name:
       <input type="text" name="exercise-name-${exercisesCount}" required value="${data.exerciseName || ''}" />
@@ -117,7 +120,7 @@ function loadRoutines() {
   routines.forEach((routine, index) => {
     const li = document.createElement('li');
 
-    // hidden div to show exercises when clcied
+    // hidden div to show exercises when clicked
     const detailDiv = document.createElement('div');
     detailDiv.className = 'routine-details';
     detailDiv.style.display = 'none';

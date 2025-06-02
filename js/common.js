@@ -38,7 +38,7 @@ function applySettings() {
       if (typeof settings.darkMode === 'boolean') {
         document.body.classList.toggle('dark-mode', settings.darkMode);
       }
-      // Apply font size to html root
+      // Apply font size to css root
       if (settings.fontSize) {
         document.documentElement.style.fontSize = settings.fontSize + '%';
       }

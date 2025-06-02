@@ -73,7 +73,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // present results
     if (matches.length === 0) {
       list.innerHTML = '<li>no matching exercises found</li>';
-    } else { // Gen AI advised
+     /**
+      This code is based upon generative AI advice
+      Accessed: 25/05/2025
+      */
+    } else {       
       matches.forEach(ex => {
         const li = document.createElement('li');
         li.textContent = ex;

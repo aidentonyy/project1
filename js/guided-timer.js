@@ -28,13 +28,14 @@ let Synth = null;
     const script = document.createElement("script");
     script.textContent = scriptText;
     document.head.appendChild(script);
+   
 
     await new Promise(r => setTimeout(r, 200));
     if (typeof Tone !== "undefined") {
       Synth = new Tone.Synth().toDestination();
       tonejsBeepPlayable = true;
     }
-    //
+     // end of Gen AI refined code
   } catch (err) {
     console.warn("tone.js didn’t load");
   }

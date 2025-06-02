@@ -2,7 +2,7 @@
  * Asynchronous function fetching quotes from the quotes JSON file
  */
 /**
-This script is learnt and used to fetch all exercises from the json file 
+This script is learnt and used to fetch all exercises from the json file through MDN Web Docs
 Reference
 *
 Author: MDN Web Docs,

@@ -111,14 +111,20 @@ function drawChart() {
   const maxWeight = Math.ceil(Math.max(...weightLogs.map(l => l.weight)));
 
   // functions to plot the date and weight to appropriate coordinates on the chart
+
+  /**
+  This code is based upon generative AI advice
+  Accessed: 28/05/2025
+  */
   function getX(date) {
-    return padding + ((new Date(date) - minDate) / (maxDate - minDate)) * (svgWidth - 2 * padding); // gen ai refined
+    return padding + ((new Date(date) - minDate) / (maxDate - minDate)) * (svgWidth - 2 * padding); 
   }
   function getY(weight) {
     return svgHeight - padding - ((weight - minWeight) / (maxWeight - minWeight)) * (svgHeight - 2 * padding); 
   }
 
   const svgNS = "http://www.w3.org/2000/svg"; // stores svg url for later elements using the DOM API
+  // end of Gen AI
 
     //draw y axis
   let line = document.createElementNS(svgNS, "line");

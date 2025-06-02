@@ -122,7 +122,11 @@ button:disabled {
   user-select: none;
 }
 
-/* responsive buttons for small screens - gen ai refined */
+/* responsive buttons for small screens */
+  /**
+  This code is based upon generative AI advice
+  Accessed: 22/05/2025
+  */
 @media (max-width: 480px) {
   #timer-container {
     flex-direction: column;
