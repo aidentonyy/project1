@@ -1,4 +1,4 @@
-const SETTINGS_KEY = 'WADD'; // the key used to access local storage
+// const SETTINGS_KEY = 'WADD'; // the key used to access local storage
 
 // loads in elements for settings input and status indication
 const saveStatus = document.getElementById('save-status');

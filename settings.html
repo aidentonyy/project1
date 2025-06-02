@@ -10,7 +10,7 @@
 <body>
   <header>
     <h1>Settings</h1>
-        <!-- nav menu -->
+    <!-- nav bar -->
     <nav class="navbar">
       <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
       <ul class="nav-links" id="nav-links">
@@ -26,14 +26,12 @@
 
   <main>
     <h2>Accessibility Settings</h2>
-    <!-- dark mode toggle -->
+    <!-- setting inputs -->
     <label for="darkModeToggle">
       <input type="checkbox" id="darkModeToggle">
       Enable Dark Mode
     </label>
     <br><br>
-
-    <!-- font size slider and default values -->
     <label for="fontSizeSlider">
       Font size:
       <input
@@ -44,13 +42,12 @@
         value="100"
         aria-valuenow="100"
         aria-label="Font size slider"
-      >
+        >
       <span id="fontSizeValue">100%</span>
     </label>
-    <!-- saved status -->
     <div id="save-status" aria-live="polite" role="status"></div>
   </main>
-  <script src="js/common.js" defer></script>
   <script src="js/settings.js" defer></script>
+  <script src="js/common.js" defer></script>
 </body>
 </html>

@@ -101,6 +101,7 @@ function tick() {
       startButton.disabled = true;
       pauseButton.disabled = true;
       stopButton.disabled = true;
+      resetTimerUI();
       return;
     } else { // switch back to exercise timer if sets are left
       exercising = true;
@@ -173,6 +174,19 @@ function pauseTimer() {
     pauseButton.textContent = 'pause';
     showStatus();
   }
+}
+
+ /**  
+ * resets the timer for reuse
+ */   
+function resetTimerUI() {
+  startButton.disabled = false;
+  pauseButton.disabled = true;
+  stopButton.disabled = true;
+  pauseButton.textContent = 'pause';
+  currentTime.classList.remove('done');
+  currentTime.textContent = 'stopped';
+  setStatus.textContent = '';
 }
 
 // timer button evenet listeners

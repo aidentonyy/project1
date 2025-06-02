@@ -14,7 +14,7 @@
     <nav class="navbar">
       <button class="menu-toggle" id="menu-toggle">&#9776;</button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
+       <li><a href="index.html">Home</a></li>
         <li><a href="workout-builder.html">Workout Builder</a></li>
         <li><a href="#" aria-current="page" class="current">Exercise Suggester</a></li> 
         <li><a href="guided-timer.html">Guided Timer</a></li>
@@ -28,7 +28,7 @@
     <!-- form to select muscle groups -->
     <form id="exerciseForm">
       <div class="muscle-groups">
-        <p><strong>Select Muscle Groups</strong></p>
+      <p><strong>Select Muscle Groups</strong></p>
         <label><input type="checkbox" name="muscle" value="chest"> Chest</label>
         <label><input type="checkbox" name="muscle" value="back"> Back</label>
         <label><input type="checkbox" name="muscle" value="legs"> Legs</label>
@@ -45,10 +45,8 @@
         <label><input type="checkbox" name="equipment" value="dumbbell"> Dumbbell</label>
         <label><input type="checkbox" name="equipment" value="bodyweight"> Bodyweight</label>
       </div>
-
       <button type="submit">Suggest Exercises</button>
     </form>
-
     <!-- displayed exercise suggestions -->
     <section id="exerciseResults">
       <h2>Suggestions</h2>
@@ -57,6 +55,7 @@
       </ul>
     </section>
   </main>
+  
 
   <script src="js/exercise-suggester.js"></script>
   <script src="js/common.js" defer></script>

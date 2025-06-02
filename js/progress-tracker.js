@@ -99,7 +99,7 @@ function drawChart() {
     lackingWeightDataMessage.setAttribute("text-anchor", "middle");
     lackingWeightDataMessage.setAttribute("font-size", "16");
     lackingWeightDataMessage.setAttribute("fill", "#888");
-    lackingWeightDataMessage.textContent = "Add more than two weight logs to generate a weight progression chart.";
+    lackingWeightDataMessage.textContent = "Add more than two weight logs, to generate a weight progression chart.";
     chart.appendChild(lackingWeightDataMessage);
     return;
   }

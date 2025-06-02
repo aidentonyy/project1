@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   // get local dark mode settings and font size
-  const darkMode = localStorage.getItem('fitnessSettings')
-    ? JSON.parse(localStorage.getItem('fitnessSettings')).darkMode
+  const darkMode = localStorage.getItem('WADD')
+    ? JSON.parse(localStorage.getItem('WADD')).darkMode
     : false;
-  const fontSize = localStorage.getItem('fitnessSettings')
-    ? JSON.parse(localStorage.getItem('fitnessSettings')).fontSize || '100'
+  const fontSize = localStorage.getItem('WADD')
+    ? JSON.parse(localStorage.getItem('WADD')).fontSize || '100'
     : '100';
 
   // switch to dark mode
@@ -26,3 +26,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+const SETTINGS_KEY = 'WADD';
+
+function applySettings() {
+  const saved = localStorage.getItem(SETTINGS_KEY);
+  if (saved) {
+    try {
+      const settings = JSON.parse(saved);
+      // Apply dark mode class to body
+      if (typeof settings.darkMode === 'boolean') {
+        document.body.classList.toggle('dark-mode', settings.darkMode);
+      }
+      // Apply font size to html root
+      if (settings.fontSize) {
+        document.documentElement.style.fontSize = settings.fontSize + '%';
+      }
+    } catch (e) {
+      console.warn('Failed to parse settings:', e);
+    }
+  }
+}
+
+// Run on every page load
+window.addEventListener('DOMContentLoaded', applySettings);

@@ -12,7 +12,7 @@
     <h1>Guided Timer</h1>
     <!-- nav menu -->
     <nav class="navbar">
-      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="workout-builder.html">Workout Builder</a></li>
@@ -20,6 +20,7 @@
         <li><a href="#" aria-current="page" class="current">Guided Timer</a></li> 
         <li><a href="progress-chart.html">Progress Tracker</a></li>
         <li><a href="settings.html">Settings</a></li>
+      
       </ul>
     </nav>
   </header>
@@ -35,16 +36,14 @@
     
     <label for="sets-count">Number of Sets:</label>
     <input type="number" id="sets-count" value="3" min="1">
-    
     <!-- timer container -->
     <div id="timer-container" style="display: flex; align-items: flex-start; gap: 2rem; margin-top: 1rem;">
       <div id="status-display" style="font-weight: bold; min-width: 140px;"></div>
-    
       <!-- timer buttons -->
       <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; margin-left: auto; min-width: 280px;">
         <div style="display: flex; justify-content: space-between; width: 100%;">
-          <button id="start-btn">Start</button>
-          <button id="pause-btn" disabled>Pause</button>
+        <button id="start-btn">Start</button>
+        <button id="pause-btn" disabled>Pause</button>
           <button id="stop-btn" disabled>Stop</button>
         </div>
         <div id="timer-display" style="font-size: 2rem; min-width: 80px; text-align: center;">Ready</div>
