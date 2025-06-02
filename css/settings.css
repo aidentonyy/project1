@@ -1,15 +1,11 @@
-/* css/settings.css */
-
-#unit-select {
-  margin-bottom: 1rem;
-}
-
+/* saved settings notification text */
 #save-status {
   color: green;
   font-weight: bold;
   margin-top: 1rem;
 }
 
+/* font slider percent */
 label[for="fontSizeSlider"] {
   display: flex;
   align-items: center;

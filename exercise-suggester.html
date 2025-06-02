@@ -10,13 +10,13 @@
 <body>
   <header>
     <h1>Exercise Suggester</h1>
-    <!-- Navigation menu -->
+    <!-- nav menu -->
     <nav class="navbar">
       <button class="menu-toggle" id="menu-toggle">&#9776;</button>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="workout-builder.html">Workout Builder</a></li>
-        <li><a href="#" aria-current="page" class="current">Exercise Suggester</a></li> <!-- current page -->
+        <li><a href="#" aria-current="page" class="current">Exercise Suggester</a></li> 
         <li><a href="guided-timer.html">Guided Timer</a></li>
         <li><a href="progress-chart.html">Progress Tracker</a></li>
         <li><a href="settings.html">Settings</a></li>
@@ -25,30 +25,31 @@
   </header>
 
   <main>
-    <!-- Form to select muscle groups and equipment -->
+    <!-- form to select muscle groups -->
     <form id="exerciseForm">
-      <fieldset>
-        <legend>Select Muscle Groups</legend>
+      <div class="muscle-groups">
+        <p><strong>Select Muscle Groups</strong></p>
         <label><input type="checkbox" name="muscle" value="chest"> Chest</label>
         <label><input type="checkbox" name="muscle" value="back"> Back</label>
         <label><input type="checkbox" name="muscle" value="legs"> Legs</label>
         <label><input type="checkbox" name="muscle" value="arms"> Arms</label>
         <label><input type="checkbox" name="muscle" value="shoulders"> Shoulders</label>
         <label><input type="checkbox" name="muscle" value="core"> Core</label>
-      </fieldset>
+      </div>
 
-      <fieldset>
-        <legend>Select Equipment</legend>
+     <!-- form to select equipment -->  
+      <div class="equipment">
+        <p><strong>Select Equipment</strong></p>
         <label><input type="checkbox" name="equipment" value="machine"> Machine</label>
         <label><input type="checkbox" name="equipment" value="barbell"> Barbell</label>
         <label><input type="checkbox" name="equipment" value="dumbbell"> Dumbbell</label>
         <label><input type="checkbox" name="equipment" value="bodyweight"> Bodyweight</label>
-      </fieldset>
+      </div>
 
       <button type="submit">Suggest Exercises</button>
     </form>
 
-    <!-- Section to show exercise suggestions -->
+    <!-- displayed exercise suggestions -->
     <section id="exerciseResults">
       <h2>Suggestions</h2>
       <ul id="exerciseList">

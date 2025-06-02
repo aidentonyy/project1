@@ -1,4 +1,4 @@
-/* workout block style */
+/* workout block  */
 .exercise-block {
   border: 1px solid #ccc;
   padding: 1rem;
@@ -7,6 +7,7 @@
   background-color: #f9f9f9;
 }
 
+/* exercise block */
 .exercise-block label {
   display: block;
   margin-top: 0.5rem;
@@ -28,7 +29,7 @@
 .routine-title {
   font-weight: bold;
   cursor: pointer;
-  color: #0077cc;
+  color: #002a48;
   text-decoration: underline;
   display: inline-block;
   margin-bottom: 0.3rem;
@@ -77,10 +78,10 @@
 }
 
 .edit-btn:hover {
-  background-color: #367dc1;
+  background-color: #124b81;
 }
 
-/* save button style */
+/* save button */
 #routine-form button[type="submit"] {
   background-color: #4caf50;
   color: white;
@@ -97,7 +98,8 @@
   background-color: #449d48;
 }
 
-/* dark mode styles */
+/* dark mode  */
+
 body.dark-mode .exercise-block {
   background-color: #222;
   border-color: #444;

@@ -1,4 +1,4 @@
-/* input box size and spacing */
+/* input box */
 input {
   max-width: 100px;
   margin-bottom: 0.5rem;
@@ -9,7 +9,7 @@ input {
   border-radius: 4px;
 }
 
-/* normal button look */
+/* normal button  */
 button {
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -31,28 +31,28 @@ button:disabled {
   border-color: #2c3e4a;
 }
 
-/* stop button is warm red */
+/* stop button ired*/
 #stop-btn {
   background-color: #e07b7b;
   border-color: #d65c5c;
   color: white;
 }
 
-/* stop button when disabled */
+/* stop button grayed out*/
 #stop-btn:disabled {
   background-color: #d17070;
   border-color: #b55555;
   color: #eee;
 }
 
-/* stop button hover style when enabled */
+/* stop button hover */
 #stop-btn:enabled:hover {
   background-color: #d17070;
   border-color: #b55555;
   cursor: pointer;
 }
 
-/* start button disabled style */
+/* start button grayed */
 #start-btn:disabled {
   background-color: #555;
   border-color: #555;
@@ -60,12 +60,12 @@ button:disabled {
   cursor: not-allowed;
 }
 
-/* highlight timer text in warm red when done */
+/* done timer red */
 #timer-display.done {
   color: #e07b7b;
 }
 
-/* status text style */
+/* status text  */
 #status-display {
   font-weight: bold;
   font-size: 1rem;
@@ -73,7 +73,7 @@ button:disabled {
   min-width: 140px;
 }
 
-/* Timer container flex layout */
+/* timer flex layout */
 #timer-container {
   display: flex;
   align-items: flex-start;
@@ -82,13 +82,13 @@ button:disabled {
   flex-wrap: wrap;
 }
 
-/* Left side: status display */
+/* set dispaly status */
 #timer-container > div:first-child {
   flex: 1 1 140px;
   min-width: 140px;
 }
 
-/* Right side: buttons and timer */
+/* timer buttons flex layout */
 #timer-container > div:last-child {
   flex: 2 1 280px;
   min-width: 280px;
@@ -98,7 +98,7 @@ button:disabled {
   gap: 0.5rem;
 }
 
-/* Buttons container inside right side */
+/* buttons */
 #timer-container > div:last-child > div:first-child {
   display: flex;
   flex-wrap: wrap;
@@ -107,14 +107,14 @@ button:disabled {
   width: 100%;
 }
 
-/* Individual buttons flex */
+/* buttons flex */
 #timer-container > div:last-child > div:first-child > button {
   flex: 1 1 80px;
   min-width: 80px;
   box-sizing: border-box;
 }
 
-/* Timer display text */
+/* timer display text */
 #timer-container > div:last-child > div:last-child {
   font-size: 2rem;
   min-width: 80px;
@@ -122,7 +122,7 @@ button:disabled {
   user-select: none;
 }
 
-/* Responsive: stack buttons vertically on narrow screens */
+/* responsive buttons for small screens - gen ai refined */
 @media (max-width: 480px) {
   #timer-container {
     flex-direction: column;

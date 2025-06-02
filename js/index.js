@@ -1,33 +1,46 @@
-// load quotes from quotes.txt
-async function fetchQuotes() {
+/**  
+ * Asynchronous function fetching quotes from the quotes JSON file
+ */
+/**
+This script is learnt and used to fetch all exercises from the json file 
+Reference
+*
+Author: MDN Web Docs,
+Location: https://developer.mozilla.org/en-US/docs/Web/API/Response,
+Accessed: 27/5/2025,
+*/  
+async function getQuotes() {
   try {
-    const res = await fetch('quotes.txt');
-    if (!res.ok) throw new Error('could not load quotes');
-    const text = await res.text();
-    // split text by new lines, remove empty lines
-    const quotes = text.split('\n').map(line => line.trim()).filter(line => line);
-    return quotes;
-  } catch (err) {
+    const response = await fetch('json/quotes.json'); // fetch the json file
+    if (!response.ok) throw new Error('could not load quotes');
+    const quotes = await response.json(); // parse the JSON throught he response
+    return quotes; // returns all the quotes
+  } catch (err) { // catches an error if quotes cant be fetched
     console.error('error fetching quotes:', err);
     return [];
   }
 }
 
-// pick quote based on today's date
-function getQuoteOfTheDay(quotes) {
-  if (quotes.length === 0) return "stay motivated and keep pushing!";
-  const now = new Date();
-  const dayNum = now.getFullYear() * 10000 + (now.getMonth() + 1) * 100 + now.getDate();
-  const index = dayNum % quotes.length;
-  return quotes[index];
+/**  
+ * Asynchronous function fetching quotes from the quotes JSON file
+ * @param {number} quotes text quotes from json file
+ */
+function pickQuote(quotes) {
+  if (quotes.length === 0) return "Stay motivated and keep pushing!"; // default message for if there are no quotes
+  const Today = new Date();
+  const dateNumber = Today.getFullYear() * 10000 + (Today.getMonth() + 1) * 100 + Today.getDate(); // create a number for the date
+  const quoteIndex = dateNumber % quotes.length; // modulo through quotes based on the date
+  return quotes[quoteIndex]; // return a line of a quote depedning on day
 }
 
-// show the quote on page
+/**  
+ * Displays a chosen quote for the date on the home page
+ */
 async function displayQuote() {
-  const quotes = await fetchQuotes();
-  const quote = getQuoteOfTheDay(quotes);
+  const quotes = await getQuotes(); 
+  const quote = pickQuote(quotes);
   document.getElementById('quoteDisplay').textContent = quote;
 }
 
-// run when page loads
+// displays the quote as soon as the page DOM is loaded in
 window.addEventListener('DOMContentLoaded', displayQuote);

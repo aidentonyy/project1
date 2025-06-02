@@ -4,14 +4,14 @@
 
   --light-bg: #eee;
   --light-text: #222;
-  --light-card: #fff;
+  --light-backBack: #fff;
 
   --dark-bg: #121212;
   --dark-text: #e0e0e0;
-  --dark-card: #1e1e1e;
+  --dark-backBack: #1e1e1e;
 }
 
-/* fade in when loading */
+
 body {
   font-family: sans-serif;
   margin: 0;
@@ -19,12 +19,12 @@ body {
   background: var(--light-bg);
   color: var(--light-text);
   opacity: 0;
-  animation: fadeIn 0.2s ease forwards;
+  animation: fadeIn 0.2s ease forwards; /* fade in when loading */
 }
 
 @keyframes fadeIn {
   to {
-    opacity: 1;
+    opacity: 1;  /* fade to full opacity */
   }
 }
 
@@ -36,7 +36,7 @@ header {
   text-align: center;
 }
 
-/* navbar layout */
+/* navbar */
 .navbar {
   display: flex;
   align-items: center;
@@ -46,11 +46,6 @@ header {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.logo {
-  color: white;
-  font-size: 24px;
-  margin-right: auto;
-}
 
 /* nav links */
 .nav-links,
@@ -63,6 +58,7 @@ nav ul {
   justify-content: center;
 }
 
+/* all nav links */
 .nav-links a,
 nav a {
   color: white;
@@ -71,6 +67,7 @@ nav a {
   transition: 0.3s;
 }
 
+/* hoverable nav link animations */
 nav a:hover,
 nav a.active {
   font-weight: bold;
@@ -78,8 +75,13 @@ nav a.active {
 }
 
 nav a.current {
-  color: #aaa;
+  color: #aaa; /* grayed out unusable current nav link page */
   pointer-events: none;
+}
+
+
+.nav-links.show {
+  display: block;
 }
 
 /* mobile menu */
@@ -92,6 +94,7 @@ nav a.current {
   cursor: pointer;
 }
 
+/* responsive burger nav menu for smaller screen */
 @media (max-width: 1222px) {
   .menu-toggle {
     display: block;
@@ -118,14 +121,15 @@ main {
   max-width: 900px;
   margin: 2rem auto;
   padding: 2rem;
-  background: var(--light-card);
+  background: var(--light-backBack);
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
+/* content containers */
 section {
   margin-bottom: 2rem;
-  background: var(--light-card);
+  background: var(--light-backBack);
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
@@ -138,6 +142,7 @@ form {
   gap: 0.5rem;
 }
 
+/* inputs */
 input, select, textarea, button {
   font-size: 1rem;
   padding: 0.5rem;
@@ -154,20 +159,9 @@ button {
   transition: 0.3s;
 }
 
+/* buttons */
 button:hover {
   background: #555;
-}
-
-/* quotes */
-blockquote#quoteDisplay {
-  font-style: italic;
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  color: #444;
-  border-left: 4px solid #333;
-  padding-left: 1rem;
-  background: #f0f0f0;
-  border-radius: 4px;
 }
 
 /* calendar */
@@ -184,6 +178,7 @@ blockquote#quoteDisplay {
   margin-top: 1rem;
 }
 
+/* calendar grid boxes */
 .calendar-grid div {
   background: #ddd;
   padding: 0.75rem;
@@ -192,15 +187,18 @@ blockquote#quoteDisplay {
   border-radius: 5px;
 }
 
+/* calendar day with log */
 .calendar-grid div.has-entry {
   background: #90ee90;
 }
 
+/* calendar day without log */
 .calendar-grid div.empty {
   background: transparent;
   cursor: default;
 }
 
+/* calendar day clicked details */
 #dayDetails {
   margin-top: 1rem;
   font-style: italic;
@@ -212,13 +210,15 @@ blockquote#quoteDisplay {
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 6px;
-  background: var(--light-card);
+  background: var(--light-backBack);
 }
 
+/* exercise blocks */
 .exercise-block label {
   display: block;
   margin-top: 0.5rem;
 }
+
 
 .exercise-block input {
   display: block;
@@ -230,6 +230,7 @@ blockquote#quoteDisplay {
   list-style: none;
   margin-bottom: 1rem;
 }
+
 
 .routine-title {
   font-weight: bold;
@@ -252,7 +253,7 @@ blockquote#quoteDisplay {
   border-radius: 4px;
 }
 
-/* action buttons */
+/* action buttons for workout routines with affordance colors */
 .remove-btn,
 .edit-btn {
   margin-left: 0.7rem;
@@ -291,7 +292,7 @@ blockquote#quoteDisplay {
   background: #449d48;
 }
 
-/* dark mode tweaks */
+/* dark mode changes - ignore repeats  */
 body.dark-mode {
   background: var(--dark-bg);
   color: var(--dark-text);
@@ -300,7 +301,7 @@ body.dark-mode {
 body.dark-mode main,
 body.dark-mode section,
 body.dark-mode .exercise-block {
-  background: var(--dark-card);
+  background: var(--dark-backBack);
   color: var(--dark-text);
 }
 
@@ -344,7 +345,4 @@ body.dark-mode blockquote#quoteDisplay {
   color: #ffffff;
 }
 
-/* Add anything for .show if used in nav menu toggle */
-.nav-links.show {
-  display: block;
-}
+

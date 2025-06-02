@@ -1,6 +1,5 @@
-// js/common.js
-
 document.addEventListener('DOMContentLoaded', () => {
+  // get local dark mode settings and font size
   const darkMode = localStorage.getItem('fitnessSettings')
     ? JSON.parse(localStorage.getItem('fitnessSettings')).darkMode
     : false;
@@ -8,18 +7,19 @@ document.addEventListener('DOMContentLoaded', () => {
     ? JSON.parse(localStorage.getItem('fitnessSettings')).fontSize || '100'
     : '100';
 
-  // apply dark mode
+  // switch to dark mode
   if (darkMode) {
     document.body.classList.add('dark-mode');
   }
 
-  // apply font size
+  // put settings set font size
   document.documentElement.style.fontSize = fontSize + '%';
 
-  // toggle mobile nav menu
+  // change to burger nav menu
   const menuToggle = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('nav-links');
 
+  // display burger menu navigation 
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
       navLinks.classList.toggle('show');
